@@ -19,17 +19,22 @@ Node.js, AWS 기반의 3년 차 웹 개발자로 소규모 조직에서 서비�
 
 ## Skills
 
+- 이 이력서에는...
+	- Frontend: `React`
+	- 상태관리: `Recoil`
+	- 번들러: `Vite`
+
 - Base
-  - JavaScript, TypeScript
+  - `JavaScript`, `TypeScript`
 
 - Frontend
-  - React, Next.js, Recoil, React-Query
+  - `React`, `Next.js`, `Recoil`, `React-Query`
 
 - Backend
-  - NestJS
+  - `NestJS`
 
 - Cloud
-  - Amazon AWS
+  - `Amazon AWS`
 
 ## Experience
 
