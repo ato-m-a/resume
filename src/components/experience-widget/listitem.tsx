@@ -5,8 +5,8 @@ import type { Career } from './types/experience';
 const Listitem = ({ company, url, position, period, description, jobs }: Career): ReactElement => {
   return (
     <li className="my-10">
-      <div className="flex">
-        <div className="basis-2/6">
+      <div className="flex max-lg:flex-col">
+        <div className="basis-2/6 max-lg:flex max-lg:flex-col max-lg:items-center max-lg:mb-4">
           <h3 className="text-4xl my-2">{company}</h3>
           <a href={url} target="_blank" rel="noreferer noopener" className="text-xl block italic font-thin hover:underline">
             {url}
@@ -15,8 +15,8 @@ const Listitem = ({ company, url, position, period, description, jobs }: Career)
           <p className="text-lg font-thin">{period}</p>
         </div>
         <div className="flex flex-col pt-2 flex-1">
-          <p className="italic text-xl font-thin">{description}</p>
-          <ul className="flex-1 pt-4 pl-4">
+          <p className="italic text-xl font-thin max-lg:text-center">{description}</p>
+          <ul className="flex-1 pt-4 pl-4 max-lg:px-14">
             {
               jobs.map((job, index) => (
                 <NestedListitem key={`job-item-${index}`} job={job} />

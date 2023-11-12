@@ -19,7 +19,7 @@ const App = () => {
           <div className="w-64 h-64 rounded-full bg-gray-300 max-md:mx-auto max-md:mb-4 overflow-hidden">
             <img src={assets.myImage} alt="my image" className="w-full h-full object-cover" />
           </div>
-          <div className="text-lg w-3/5 max-md:w-full font-extralight leading-9 max-lg:pl-8 max-md:mx-auto font-pretendard">
+          <div className="text-lg w-3/5 max-md:w-full font-extralight leading-9 max-lg:pl-8 max-md:mx-auto font-pretendard break-keep">
             Node.js, AWS 기반의 3년 차 웹 개발자로 소규모 조직에서 서비스의 개발 주기 전반에 걸쳐 주도적으로 업무를 진행해왔습니다.
             주로 프론트엔드 개발을 담당했으며, 필요에 따라 백엔드 개발 및 클라우드 인프라 엔지니어링을 겸하였습니다. <br/>
             창업 초기 단계의 스타트업에서 서비스의 초기 설계부터 개발, 운영까지 경험하였고, 이 과정에서 개발 조직을 리드하며 <TextHighlight>회사의 기술 기반 마련</TextHighlight>에
