@@ -10,7 +10,7 @@ const App = () => {
     <RecoilRoot>
       <Header />
       {/* About Me */}
-      <Section.wrapper className="pt-80">
+      <Section.wrapper className="pt-80 max-md:pt-40">
         <Section.header>
           <Section.title>😊 About Me</Section.title>
           <Section.subTitle>저를 소개해 드릴게요 !</Section.subTitle>
