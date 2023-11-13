@@ -1,6 +1,6 @@
 import { github, linkedin } from '@/common/assets';
 import { useScroll } from '@/hooks/useScroll';
-import { ReactElement } from 'react';
+import type { ReactElement } from 'react';
 
 const Header = (): ReactElement => {
   const scrolled = useScroll();

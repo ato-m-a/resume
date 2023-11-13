@@ -1,5 +1,5 @@
-import { FCProps } from '@/components/types/FC';
+import type { FCProps } from '@/components/types/FC';
 
-export interface SectionProps extends FCProps {
+export interface WithClassName extends FCProps {
   className?: string;
 }
