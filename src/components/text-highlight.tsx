@@ -1,4 +1,4 @@
-import type { ReactFC } from '@/components/types/FC';
+import type { ReactFC } from '@/types/component';
 
 const TextHighlight: ReactFC = ({ children }) => {
   return <span className="p-1 bg-gray-700 rounded text-white">{children}</span>

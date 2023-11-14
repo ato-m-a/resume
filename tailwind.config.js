@@ -13,22 +13,21 @@ module.exports = {
       screens: {
         'custom-lg' : '992px',
         'max-lg': {'max': '992px'},
-        'max-md': {'max': '767px'},
+        'max-md': {'max': '767px'}
       },
       container: (theme) => ({
         center: true,
         padding: '1rem',
         screens : {
-          'custom-lg' : '970px',
+          'custom-lg' : '970px'
         },
       }),
       spacing: {
-        '252': '252px',
+        '252': '252px'
       },
       width: {
         '2/3': '66.6666%',
-        '3/5': '60%',
-
+        '3/5': '60%'
       },
     }
   },

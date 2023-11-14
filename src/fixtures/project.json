@@ -1,0 +1,50 @@
+[
+  {
+    "name": "사전 청약 페이지 간편 구축 시스템",
+    "at": "(주)하이브미디어",
+    "summary": {
+      "period": "2022.10 ~ 2022.11 (1개월)",
+      "description": "Server-Driven UI로 간편하게 사전 청약 페이지를 수정 혹은 개설하는 시스템",
+      "role": "풀스택 개발",
+      "participants": 2,
+      "content": [
+        "Next.js 기반 메인 클라이언트 사이드 개발"
+      ]
+    },
+    "details": {
+      
+    }
+  },
+  {
+    "name": "이벤트월드",
+    "at": "(주)하이브미디어",
+    "summary": {
+      "period": "2022.06 ~ 2022.09 (3개월)",
+      "description": "웹 이벤트 광고주 어드민 시스템의 B2B SaaS 전환 프로젝트",
+      "role": "풀스택 개발",
+      "participants": 3,
+      "content": [
+
+      ]
+    },
+    "details": {
+
+    }
+  },
+  {
+    "name": "데이터메니티",
+    "at": "(주)히어로웍스",
+    "summary": {
+      "period": "2021.05 ~ 2021.09 (4개월)",
+      "description": "주변 호텔 가격 변동 확인 및 PMS와의 연동을 통한 OTA 관리 기능을 제공하는 수익 관리 시스템(RMS)",
+      "role": "풀스택 개발",
+      "participants": 4,
+      "content": [
+
+      ]
+    },
+    "details": {
+
+    }
+  }
+]
