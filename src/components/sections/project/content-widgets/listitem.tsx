@@ -2,10 +2,10 @@ import type { LiProps } from '@/components/sections/project/types/listitem';
 import type { ReactElement } from 'react';
 
 const Listitem = ({ content }: LiProps): ReactElement => {
-  if (typeof content === 'string') return <li className="my-2 list-disc">{content}</li>
+  if (typeof content === 'string') return <li className="mb-2 list-disc">{content}</li>
   
   return (
-    <li className="my-2">
+    <li className="mb-2">
       <ul className="pl-5 list-indent">
         {
           content.map((detail, index) => (

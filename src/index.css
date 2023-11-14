@@ -22,3 +22,77 @@ html {
 .list-indent {
   list-style-type: circle;
 }
+
+.remote-wrapper {
+  @apply rounded-full shadow-xl bg-white border px-4 py-4 transition-all ease-in-out duration-500;
+}
+
+.remote-button {
+  @apply rounded-[50%] flex items-center justify-center w-10 h-10 shadow-xl cursor-pointer;
+  @apply transition-all ease-in-out origin-center duration-300;
+  @apply hover:bg-gray-100 hover:scale-150;
+}
+
+.modal__wrapper, .modal {
+  animation-duration: 0.25s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.modal__button {
+  @apply rounded-2xl font-pretendard bg-white shadow-xl font-medium transition-all duration-300 px-4 py-2 hover:bg-gray-100;
+  @apply cursor-pointer max-lg:text-sm max-md:text-xs;
+}
+
+.modal__wrapper {
+  @apply inset-0 z-50 bg-black bg-opacity-30 flex w-full h-full justify-center items-center p-[20px];
+  @apply max-md:p-0;
+  animation-name: fadeIn;
+}
+
+.modal {
+  @apply bg-white rounded-lg shadow-xl border border-black border-solid box-border p-8 w-full h-full flex flex-col;
+  @apply max-md:p-4;
+  animation-name: slideUp;
+}
+
+.modal__wrapper.close {
+  animation-name: fadeOut;
+}
+
+.modal.close {
+  animation-name: slideDown;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-100px);
+  }
+}

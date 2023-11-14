@@ -1,8 +1,10 @@
 import { FixtureRepository } from '@/common/repository';
 import { Header, TextHighlight } from '@/components';
+import * as Floating from '@/components/layout/floating';
 import * as Section from '@/components/layout/section';
-import { About, Experience, Project, Skills } from '@/components/sections';
+import { About, Experience, Project, RemoteControl, Skills } from '@/components/sections';
 import { RecoilRoot } from 'recoil';
+import ModalPortal from './components/layout/modal-portal';
 import type { Career, Project as Projects, Skill } from './types/fixtures';
 
 const App = () => {
@@ -14,7 +16,7 @@ const App = () => {
     <RecoilRoot>
       <Header />
       {/* About Me */}
-      <Section.wrapper className="pt-80 max-md:pt-40">
+      <Section.wrapper className="pt-80 max-md:pt-40" id="about">
         <Section.header>
           <Section.title>😊 About Me</Section.title>
           <Section.subtitle>저를 소개해 드릴게요 !</Section.subtitle>
@@ -39,7 +41,7 @@ const App = () => {
         </About.wrapper>
       </Section.wrapper>
       {/* Skills */}
-      <Section.wrapper>
+      <Section.wrapper id="skills">
         <Section.header>
           <Section.title>💻 Skills</Section.title>
           <Section.subtitle>업무에 사용 중이거나, 사용 경험이 있는 기술들이에요 !</Section.subtitle>
@@ -61,7 +63,7 @@ const App = () => {
         </Skills.wrapper>
       </Section.wrapper>
       {/* Experience */}
-      <Section.wrapper>
+      <Section.wrapper id="experience">
         <Section.header>
           <Section.title>🌟 Experience</Section.title>
           <Section.subtitle>제가 쌓아온 경험들을 보여드릴게요 !</Section.subtitle>
@@ -75,7 +77,7 @@ const App = () => {
         </Experience.wrapper>
       </Section.wrapper>
       {/* Project */}
-      <Section.wrapper>
+      <Section.wrapper id="project">
         <Section.header>
           <Section.title>🚀 Project</Section.title>
           <Section.subtitle>지금까지 이런 프로젝트를 해왔어요 !</Section.subtitle>
@@ -88,13 +90,13 @@ const App = () => {
           }
         </Project.wrapper>
       </Section.wrapper>
-      {/* Contact */}
-      <Section.wrapper>
-        <Section.header>
-          <Section.title>📞 Contact</Section.title>
-          <Section.subtitle>관심있게 보셨다면, 편하게 연락 주세요 !</Section.subtitle>
-        </Section.header>
-      </Section.wrapper>
+      <Floating.wrapper className="font-pretendard font-thin p-2 bottom-2 left-2 max-md:text-sm">
+        <p>2023년 11월 15일 업데이트</p>
+      </Floating.wrapper>
+      <RemoteControl />
+      <ModalPortal>
+        <Project.modal />
+      </ModalPortal>
     </RecoilRoot>
   )
 }

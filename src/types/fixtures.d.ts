@@ -16,6 +16,11 @@ export interface Skill {
   content: string[];
 }
 
+export interface ProjectDetail {
+  type: 'image' | 'text';
+  content: string;
+}
+
 export interface Project {
   name: string;
   at: string;
@@ -26,7 +31,5 @@ export interface Project {
     participants: number;
     content: (string | string[])[];
   };
-  details: {
-
-  };
+  details: ProjectDetail[];
 }

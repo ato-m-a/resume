@@ -3,7 +3,7 @@ import { useScroll } from '@/hooks/useScroll';
 import type { ReactElement } from 'react';
 
 const Header = (): ReactElement => {
-  const scrolled = useScroll();
+  const scrolled = useScroll(100);
 
   return (
     <header className={`${scrolled ? 'head-down' : ''} fixed w-full py-12 bg-gray-100 z-50 max-md:py-6`}>

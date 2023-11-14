@@ -15,7 +15,7 @@ const Content = ({ company, url, position, period, description, jobs }: Career):
           <h4 className="text-xl my-2">{position}</h4>
           <p className="text-lg font-thin">{period}</p>
         </DividedRow.titleColumn>
-        <DividedRow.contentColumn>
+        <DividedRow.contentColumn className="pt-2">
           <p className="italic text-xl font-thin max-lg:text-center">{description}</p>
           <ul className="flex-1 pt-4 pl-4 max-lg:px-14">
             {
