@@ -1,5 +1,5 @@
+import type { NestedJobItemProps } from '@/common/fixtures.d';
 import type { ReactElement } from 'react';
-import type { NestedJobItemProps } from './types/experience';
 
 const NestedListitem = ({ job }: NestedJobItemProps): ReactElement => {
   if (typeof job === 'string') return <li className="my-2 list-disc">{job}</li>

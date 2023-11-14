@@ -1,6 +1,6 @@
+import type { Career } from '@/common/fixtures.d';
 import type { ReactElement } from 'react';
 import NestedListitem from './nested-listitem';
-import type { Career } from './types/experience';
 
 const Listitem = ({ company, url, position, period, description, jobs }: Career): ReactElement => {
   return (

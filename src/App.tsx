@@ -1,8 +1,9 @@
 import * as assets from '@/common/assets';
-import { Experience, Header, TextHighlight } from '@/components';
+import { career, skillset } from '@/common/fixtures';
+import { Header, TextHighlight } from '@/components';
 import * as Accordion from '@/components/accordion';
+import * as DividedRow from '@/components/divided-row';
 import * as Section from '@/components/section';
-import skillset from '@/fixtures/skillset.json';
 import { RecoilRoot } from 'recoil';
 
 const App = () => {
@@ -113,7 +114,13 @@ const App = () => {
           <Section.title>🌟 Experience</Section.title>
           <Section.subTitle>제가 쌓아온 경험들을 보여드릴게요 !</Section.subTitle>
         </Section.header>
-        <Experience />
+        <ul className="flex flex-col font-pretendard">
+          {
+            career.map((content, index) => (
+              <DividedRow.listitem key={`career-li-${index}`} {...content} />
+            ))
+          }
+        </ul>
       </Section.wrapper>
     </RecoilRoot>
   )
