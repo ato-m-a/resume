@@ -1,11 +1,16 @@
 import * as DividedRow from '@/components/layout/divided-row';
+import { useAnimation } from '@/hooks/useAnimation';
 import type { Career } from '@/types/fixtures';
 import type { ReactElement } from 'react';
+import { useRef } from 'react';
 import Listitem from './listitem';
 
 const Content = ({ company, url, position, period, description, jobs }: Career): ReactElement => {
+  const listitemRef = useRef<HTMLLIElement>(null);
+  useAnimation(listitemRef);
+
   return (
-    <li className="my-10">
+    <li className="my-10" ref={listitemRef}>
       <DividedRow.responsiveWrapper>
         <DividedRow.titleColumn>
           <h3 className="text-4xl my-2">{company}</h3>

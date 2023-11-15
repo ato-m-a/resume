@@ -1,15 +1,19 @@
 import * as DividedRow from '@/components/layout/divided-row';
+import { useAnimation } from '@/hooks/useAnimation';
 import { useModal } from '@/hooks/useModal';
 import type { Project } from '@/types/fixtures';
-import type { ReactElement } from 'react';
+import { useRef, type ReactElement } from 'react';
 import Listitem from './listitem';
 
 const Content = (project: Project): ReactElement => {
   const { name, at, summary } = project;
   const { openModal } = useModal();
 
+  const listitemRef = useRef<HTMLLIElement>(null);
+  useAnimation(listitemRef);
+
   return (
-    <li className="my-10">
+    <li className="my-10" ref={listitemRef}>
       <DividedRow.responsiveWrapper>
         <DividedRow.titleColumn>
           <a className="text-xl my-2 text-blue-900 hover:underline cursor-pointer" onClick={() => openModal(project)}>{name}</a>
