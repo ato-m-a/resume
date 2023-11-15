@@ -1,4 +1,4 @@
-import type { LiProps } from '@/components/sections/project/types/listitem';
+import type { LiProps } from '@/components/sections/project/content/types/listitem';
 import type { ReactElement } from 'react';
 
 const Listitem = ({ content }: LiProps): ReactElement => {

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Content = styled.div<{ $activate: boolean; }>`
+const Body = styled.div<{ $activate: boolean; }>`
   height: ${props => props.$activate ? 'auto' : '0'};
   overflow: hidden;
   transition: all 0.3s ease;
@@ -8,4 +8,4 @@ const Content = styled.div<{ $activate: boolean; }>`
   opacity: ${props => props.$activate ? 1 : 0};
 `;
 
-export default Content;
+export default Body;

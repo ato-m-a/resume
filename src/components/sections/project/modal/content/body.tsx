@@ -13,10 +13,10 @@ const Body: ComponentType<ModalProps> = ({ activeItem }) => {
               <Image src={item.image} />
             </div>
             {
-              typeof item.text === 'string' ? <p className="font-pretendard text-2xl font-light">{item.text}</p> :
+              typeof item.text === 'string' ? <p className="font-pretendard text-2xl break-keep font-light">{item.text}</p> :
               (
                 item.text.map((str, index) => (
-                  <p className={`font-pretendard text-2xl font-light ${index !== item.text.length - 1 ? 'mb-2' : ''}`}>{str}</p>
+                  <p key={`modal-nested-paragraph-${index}`} className={`font-pretendard text-2xl break-keep font-light ${index !== item.text.length - 1 ? 'mb-2' : ''}`}>{str}</p>
                 ))
               )
             }

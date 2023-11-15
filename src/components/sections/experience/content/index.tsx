@@ -1,7 +1,7 @@
 import * as DividedRow from '@/components/layout/divided-row';
 import type { Career } from '@/types/fixtures';
 import type { ReactElement } from 'react';
-import * as Widgets from './content-widgets';
+import Listitem from './listitem';
 
 const Content = ({ company, url, position, period, description, jobs }: Career): ReactElement => {
   return (
@@ -20,7 +20,7 @@ const Content = ({ company, url, position, period, description, jobs }: Career):
           <ul className="flex-1 pt-4 pl-4 max-lg:px-14">
             {
               jobs.map((job, index) => (
-                <Widgets.listitem key={`job-item-${index}`} job={job} />
+                <Listitem key={`job-item-${index}`} job={job} />
               ))
             }
           </ul>

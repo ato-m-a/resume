@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react';
-import type { IconProps } from '../types/title';
+import type { IconProps } from './types/title';
 
 const Icon = ({ icon }: IconProps): ReactElement => {
   const regex = new RegExp(/^\/images\/.*\.webp$/);

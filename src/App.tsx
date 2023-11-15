@@ -1,10 +1,8 @@
 import { FixtureRepository } from '@/common/repository';
-import { Header, TextHighlight } from '@/components';
-import * as Floating from '@/components/layout/floating';
-import * as Section from '@/components/layout/section';
-import { About, Experience, Project, RemoteControl, Skills } from '@/components/sections';
+import { Header } from '@/components';
+import { Emoji, Floating, ModalPortal, RemoteControl, Section, TextHighlight } from '@/components/layout';
+import { About, Experience, Project, Skills } from '@/components/sections';
 import { RecoilRoot } from 'recoil';
-import ModalPortal from './components/layout/modal-portal';
 import type { Career, Project as Projects, Skill } from './types/fixtures';
 
 const App = () => {
@@ -18,7 +16,7 @@ const App = () => {
       {/* About Me */}
       <Section.wrapper className="pt-80 max-md:pt-40" id="about">
         <Section.header>
-          <Section.title>😊 About Me</Section.title>
+          <Section.title><Emoji.hello /> About Me</Section.title>
           <Section.subtitle>저를 소개해 드릴게요 !</Section.subtitle>
         </Section.header>
         <About.wrapper>
@@ -43,7 +41,7 @@ const App = () => {
       {/* Skills */}
       <Section.wrapper id="skills">
         <Section.header>
-          <Section.title>💻 Skills</Section.title>
+          <Section.title><Emoji.skill /> Skills</Section.title>
           <Section.subtitle>업무에 사용 중이거나, 사용 경험이 있는 기술들이에요 !</Section.subtitle>
           <Section.subtitle className="mt-2">
             <span className="bg-blue-600 text-white px-2 py-1 text-sm rounded mr-2">Beginner - 1</span>
@@ -65,7 +63,7 @@ const App = () => {
       {/* Experience */}
       <Section.wrapper id="experience">
         <Section.header>
-          <Section.title>🌟 Experience</Section.title>
+          <Section.title><Emoji.experience /> Experience</Section.title>
           <Section.subtitle>제가 쌓아온 경험들을 보여드릴게요 !</Section.subtitle>
         </Section.header>
         <Experience.wrapper>
@@ -79,7 +77,7 @@ const App = () => {
       {/* Project */}
       <Section.wrapper id="project">
         <Section.header>
-          <Section.title>🚀 Project</Section.title>
+          <Section.title><Emoji.project /> Project</Section.title>
           <Section.subtitle>지금까지 이런 프로젝트를 해왔어요 !</Section.subtitle>
         </Section.header>
         <Project.wrapper>

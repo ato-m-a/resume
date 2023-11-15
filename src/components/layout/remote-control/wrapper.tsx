@@ -1,3 +1,4 @@
+import Emoji from '@/components/layout/emoji';
 import { useCallback, type ReactElement } from 'react';
 
 const RemoteControl = (): ReactElement => {
@@ -16,10 +17,10 @@ const RemoteControl = (): ReactElement => {
 
   return (
     <div className="remote-wrapper">
-      <p className="remote-button mb-3" onClick={() => goTo('about')}>😊</p>
-      <p className="remote-button mb-3" onClick={() => goTo('skills')}>💻</p>
-      <p className="remote-button mb-3" onClick={() => goTo('experience')}>🌟</p>
-      <p className="remote-button" onClick={() => goTo('project')}>🚀</p>
+      <p className="remote-button mb-3" onClick={() => goTo('about')}><Emoji.hello /></p>
+      <p className="remote-button mb-3" onClick={() => goTo('skills')}><Emoji.skill /></p>
+      <p className="remote-button mb-3" onClick={() => goTo('experience')}><Emoji.experience /></p>
+      <p className="remote-button" onClick={() => goTo('project')}><Emoji.project /></p>
     </div>
   )
 }

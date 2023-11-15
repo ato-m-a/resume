@@ -2,7 +2,7 @@ import * as DividedRow from '@/components/layout/divided-row';
 import { useModal } from '@/hooks/useModal';
 import type { Project } from '@/types/fixtures';
 import type { ReactElement } from 'react';
-import * as Widgets from './content-widgets';
+import Listitem from './listitem';
 
 const Content = (project: Project): ReactElement => {
   const { name, at, summary } = project;
@@ -25,7 +25,7 @@ const Content = (project: Project): ReactElement => {
           <ul className="flex-1 pl-4 max-lg:px-14">
             {
               summary.content.map((content, index) => (
-                <Widgets.listitem key={`project-content-${index}`} content={content} />
+                <Listitem key={`project-content-${index}`} content={content} />
               ))
             }
           </ul>

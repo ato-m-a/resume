@@ -1,13 +1,14 @@
 import type { ReactElement } from 'react';
-import * as Widget from './title-widgets';
+import Icon from './icon';
+import getComponent from './level';
 import type { TitleProps } from './types/title';
 
 const Title = ({ id, icon, level }: TitleProps): ReactElement => {
-  const Level = Widget.getComponent(level);
+  const Level = getComponent(level);
 
   return (
     <div className="flex items-center">
-      <Widget.icon icon={icon} />
+      <Icon icon={icon} />
       <span className="mx-2">{id}</span>
       <Level />
     </div>
