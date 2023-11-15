@@ -84,6 +84,29 @@ html {
   display: none;
 }
 
+.popup-animate {
+  
+}
+
+@keyframes slideUp {
+  0% {
+    visibility: hidden;
+    transform: translateY(30px) translateZ(0px);
+  }
+  50% {
+    visibility: hidden;
+    transform: translateY(10px) translateZ(0px);
+  }
+  100% {
+    visibility: visible;
+    transform: none;
+  }
+}
+
+.popup-animate.slideUp {
+  animation: slideUp 0.5s ease forwards;
+}
+
 @media screen and (max-width: 991px) {
   .tech-stack::before {
     height: 15px;

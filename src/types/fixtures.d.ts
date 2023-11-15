@@ -18,7 +18,7 @@ export interface Skill {
 
 export interface ProjectDetail {
   image: string;
-  text: string | string[];
+  text: string[];
 }
 
 export interface Project {
