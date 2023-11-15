@@ -10,7 +10,7 @@ const Header = (): ReactElement => {
       <div className="container mx-auto flex justify-between">
         <div className="flex-1">
           <h1 className="text-5xl text-primary font-normal font-pretendard py-1 max-md:text-3xl">홍준혁</h1>
-          <h2 className="text-2xl font-thin font-pretendard text-primary max-md:text-xl">웹 프론트엔드 개발자</h2>
+          <h2 className="text-2xl font-thin font-pretendard text-primary max-md:text-xl">몰입해서 더 즐거운 개발자</h2>
         </div>
         <nav className="flex-1 flex justify-end">
           <ul className="h-full flex items-center space-x-4">

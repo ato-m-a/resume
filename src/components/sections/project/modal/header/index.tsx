@@ -1,14 +1,9 @@
-import { useModal } from '@/hooks/useModal';
-import type { ModalElement } from '../types/modal';
+import type { ReactElement } from 'react';
 import Button from './button';
 import Subtitle from './subtitle';
 import Title from './title';
 
-const Header = (): ModalElement => {
-  const { isActivate } = useModal();
-
-  if (!isActivate) return null;
-
+const Header = (): ReactElement => {
   return (
     <div className="flex justify-between items-center">
       <div className="font-pretendard">

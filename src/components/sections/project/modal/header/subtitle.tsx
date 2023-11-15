@@ -1,14 +1,9 @@
-import { useModal } from '@/hooks/useModal';
-import type { ModalElement } from '../types/modal';
+import type { ComponentType } from 'react';
+import type { ModalProps } from '../types/modal';
+import withState from '../withState';
 
-const Subtitle = (): ModalElement => {
-  const { isActivate, activeItem } = useModal();
-
-  if (!isActivate) return null;
-
-  return (
-    <span className="text-lg font-thin max-lg:text-sm">{activeItem?.at}</span>
-  )
+const Subtitle: ComponentType<ModalProps> = ({ activeItem }) => {
+  return <span className="text-lg font-thin max-lg:text-sm">{activeItem.at}</span>
 }
 
-export default Subtitle;
+export default withState(Subtitle);

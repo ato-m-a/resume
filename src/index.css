@@ -64,6 +64,32 @@ html {
   animation-name: slideDown;
 }
 
+.tech-stack {
+  color: #999;
+}
+
+.tech-stack::before {
+  background-color: #d0d0d0;
+  content: "";
+  display: inline-block;
+  height: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  transform: skew(-15deg,-15deg);
+  vertical-align: middle;
+  width: 1px;
+}
+
+.tech-stack:first-child::before {
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  .tech-stack::before {
+    height: 15px;
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

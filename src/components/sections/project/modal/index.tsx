@@ -1,11 +1,10 @@
 import * as Floating from '@/components/layout/floating';
 import { useModal } from '@/hooks/useModal';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type ReactElement } from 'react';
 import Content from './content';
 import Header from './header';
-import type { ModalElement } from './types/modal';
 
-const Modal = (): ModalElement => {
+const Modal = (): ReactElement | null => {
   const { isActivate } = useModal();
 
   const [animate, setAnimate] = useState<boolean>(false);

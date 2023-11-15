@@ -1,7 +1,7 @@
 import { useModal } from '@/hooks/useModal';
-import type { ModalElement } from '../types/modal';
+import type { ReactElement } from 'react';
 
-const Button = (): ModalElement => {
+const Button = (): ReactElement => {
   const { closeModal } = useModal();
 
   return <p className="modal__button" onClick={closeModal}>닫기</p>;

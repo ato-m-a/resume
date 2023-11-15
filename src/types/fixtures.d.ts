@@ -17,8 +17,8 @@ export interface Skill {
 }
 
 export interface ProjectDetail {
-  type: 'image' | 'text';
-  content: string;
+  image: string;
+  text: string | string[];
 }
 
 export interface Project {
@@ -31,5 +31,12 @@ export interface Project {
     participants: number;
     content: (string | string[])[];
   };
-  details: ProjectDetail[];
+  details: {
+    header: {
+      image: string;
+      tech_stack: string[];
+      text: string[];
+    },
+    body: ProjectDetail[];
+  }
 }

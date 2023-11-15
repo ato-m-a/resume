@@ -1,14 +1,12 @@
-import { useModal } from '@/hooks/useModal';
-import type { ModalElement } from '../types/modal';
+import type { ReactElement } from 'react';
+import Body from './body';
+import Header from './header';
 
-const Content = (): ModalElement => {
-  const { isActivate } = useModal();
-
-  if (!isActivate) return null;
-
+const Content = (): ReactElement => {
   return (
-    <div className="overflow-scroll flex flex-col flex-1 pt-4">
-      
+    <div className="overflow-scroll flex flex-col flex-1 pt-8">
+      <Header />
+      <Body />
     </div>
   )
 }

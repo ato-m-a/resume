@@ -1,14 +1,9 @@
-import { useModal } from '@/hooks/useModal';
-import type { ModalElement } from '../types/modal';
+import type { ComponentType } from 'react';
+import type { ModalProps } from '../types/modal';
+import withState from '../withState';
 
-const Title = (): ModalElement => {
-  const { isActivate, activeItem } = useModal();
-
-  if (!isActivate) return null;
-  
-  return (
-    <h1 className="text-2xl font-semibold max-lg:text-lg">{activeItem?.name}</h1>
-  )
+const Title: ComponentType<ModalProps> = ({ activeItem }) => {
+  return <h1 className="text-2xl font-semibold max-md:text-lg">{activeItem.name}</h1>
 }
 
-export default Title;
+export default withState(Title);

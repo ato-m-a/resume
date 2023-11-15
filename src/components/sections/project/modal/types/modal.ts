@@ -1,3 +1,5 @@
-import type { ReactElement } from 'react';
+import type { Project } from '@/types/fixtures';
 
-export type ModalElement = ReactElement | null;
+export interface ModalProps {
+  activeItem: Project;
+}
