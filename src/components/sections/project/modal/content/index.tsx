@@ -4,7 +4,7 @@ import Header from './header';
 
 const Content = (): ReactElement => {
   return (
-    <div className="overflow-scroll flex flex-col flex-1 pt-8">
+    <div className="overflow-y-scroll overflow-x-hidden flex flex-col flex-1 pt-8">
       <Header />
       <Body />
     </div>
