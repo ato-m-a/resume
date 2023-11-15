@@ -1,11 +1,10 @@
-import * as DividedRow from '@/components/layout/divided-row';
+import { Bullet, DividedRow } from '@/components/layout';
 import { useAnimation } from '@/hooks/useAnimation';
 import type { Career } from '@/types/fixtures';
 import type { ReactElement } from 'react';
 import { useRef } from 'react';
-import Listitem from './listitem';
 
-const Content = ({ company, url, position, period, description, jobs }: Career): ReactElement => {
+const Content = ({ company, url, position, period, description, bullets }: Career): ReactElement => {
   const listitemRef = useRef<HTMLLIElement>(null);
   useAnimation(listitemRef);
 
@@ -24,8 +23,8 @@ const Content = ({ company, url, position, period, description, jobs }: Career):
           <p className="italic text-xl font-thin max-lg:text-center">{description}</p>
           <ul className="flex-1 pt-4 pl-4 max-lg:px-14">
             {
-              jobs.map((job, index) => (
-                <Listitem key={`job-item-${index}`} job={job} />
+              bullets.map((bullet, index) => (
+                <Bullet key={`experience-bullet-${index}`} {...bullet} />
               ))
             }
           </ul>

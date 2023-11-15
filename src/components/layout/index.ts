@@ -1,3 +1,4 @@
+export { default as Bullet } from './bullet';
 export * as DividedRow from './divided-row';
 export { default as Emoji } from './emoji';
 export * as Floating from './floating';

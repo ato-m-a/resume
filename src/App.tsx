@@ -53,7 +53,7 @@ const App = () => {
         <Skills.wrapper>
           {
             skills.map((skill, index) => (
-              <Skills.content key={`skill-content-${index}`} id={skill.id} content={skill.content}>
+              <Skills.content key={`skill-content-${index}`} id={skill.id} bullets={skill.bullets}>
                 <Skills.title id={skill.id} level={skill.level} icon={skill.icon}  />
               </Skills.content>
             ))
