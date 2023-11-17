@@ -5,7 +5,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary': '#333333'
+        'primary': '#333333',
+        'notion-bg': '#F3F4F6'
       },
       fontFamily: {
         'pretendard': ['Pretendard', 'sans-serif']
@@ -28,7 +29,7 @@ module.exports = {
       width: {
         '2/3': '66.6666%',
         '3/5': '60%'
-      },
+      }
     }
   },
   plugins: [

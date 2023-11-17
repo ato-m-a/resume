@@ -1,0 +1,1 @@
+export type PortfolioKey = 'eventworld' | 'easy-sys';

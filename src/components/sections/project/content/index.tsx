@@ -1,12 +1,11 @@
 import { Bullet, DividedRow } from '@/components/layout';
 import { useAnimation } from '@/hooks/useAnimation';
-import { useModal } from '@/hooks/useModal';
 import type { Project } from '@/types/fixtures';
 import { useRef, type ReactElement } from 'react';
+import { Link } from 'react-router-dom';
 
 const Content = (project: Project): ReactElement => {
-  const { at, name, participants, role, period, bullets } = project.summary;
-  const { openModal } = useModal();
+  const { at, name, participants, role, period, bullets, path } = project;
 
   const listitemRef = useRef<HTMLLIElement>(null);
   useAnimation(listitemRef);
@@ -15,7 +14,11 @@ const Content = (project: Project): ReactElement => {
     <li className="my-10" ref={listitemRef}>
       <DividedRow.responsiveWrapper>
         <DividedRow.titleColumn>
-          <a className="text-xl my-2 text-blue-900 hover:underline cursor-pointer" onClick={() => openModal(project)}>{name}</a>
+          {
+            path
+              ? <Link className="text-xl my-2 text-blue-900 hover:underline cursor-pointer" to={path}>{name}</Link>
+              : <h3 className="text-xl my-2">{name}</h3>
+          }
           <p className="text-lg font-light">
             {at} <span className="text-lg">({participants}명)</span>
           </p>

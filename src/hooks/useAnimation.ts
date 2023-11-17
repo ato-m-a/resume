@@ -1,10 +1,9 @@
 import { useEffect, type RefObject } from 'react';
 
-export const useAnimation = (ref: RefObject<HTMLElement>) => {
+export const useAnimation = (ref: RefObject<HTMLElement>, duration: number = 1000) => {
   useEffect(() => {
     const element = ref.current;
     const easeOutQuad = (t: number) => t * (2 - t);
-    const duration = 1000;
 
     const animateIn = () => {
       let start: number | null = null;
