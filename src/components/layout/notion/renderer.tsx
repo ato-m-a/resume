@@ -6,7 +6,7 @@ import { Collection } from 'react-notion-x/build/third-party/collection';
 
 const Notion = ({ recordMap }: { recordMap: any }) => {
   const wrapperRef = useRef<HTMLDivElement>(null);
-  useAnimation(wrapperRef);
+  useAnimation(wrapperRef, false);
 
   return (
     <div ref={wrapperRef} className="bg-notion-bg">

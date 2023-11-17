@@ -89,7 +89,7 @@ const Main = (): ReactElement => {
         </Project.wrapper>
       </Section.wrapper>
       <Floating.wrapper className="font-pretendard font-thin p-2 bottom-2 left-2 max-md:text-sm">
-        <p>2023년 11월 15일 업데이트</p>
+        <p>2023년 11월 17일 업데이트</p>
       </Floating.wrapper>
       <RemoteControl />
     </>

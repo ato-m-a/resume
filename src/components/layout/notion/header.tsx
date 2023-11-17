@@ -6,8 +6,8 @@ const Header = ({ src, title }: HeaderProps): ReactElement => {
   const imageWrapperRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
 
-  useAnimation(imageWrapperRef);
-  useAnimation(headingRef);
+  useAnimation(imageWrapperRef, false);
+  useAnimation(headingRef, false);
 
   return (
     <>

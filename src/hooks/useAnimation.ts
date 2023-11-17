@@ -1,9 +1,10 @@
 import { useEffect, type RefObject } from 'react';
 
-export const useAnimation = (ref: RefObject<HTMLElement>, duration: number = 1000) => {
+export const useAnimation = (ref: RefObject<HTMLElement>, animateWhenFocusOut: boolean = true) => {
   useEffect(() => {
     const element = ref.current;
     const easeOutQuad = (t: number) => t * (2 - t);
+    const duration = 1000;
 
     const animateIn = () => {
       let start: number | null = null;
@@ -57,7 +58,7 @@ export const useAnimation = (ref: RefObject<HTMLElement>, duration: number = 100
         if (entry.isIntersecting) {
           animateIn();
         } else {
-          animateOut();
+          if (animateWhenFocusOut) animateOut();
         }
       });
     }, { threshold: 0.15 });
