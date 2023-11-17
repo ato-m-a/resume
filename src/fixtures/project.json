@@ -29,7 +29,7 @@
         ]
       }
     ],
-    "path": "/portfolio/사전청약-페이지-간편-구축-시스템"
+    "path": "/사전청약-페이지-간편-구축-시스템"
   },
   {
     "order": 2,
@@ -59,7 +59,7 @@
         "outer": "Node.js 기반 REST API 개발(CRUD)"
       }
     ],
-    "path": "/portfolio/이벤트월드"
+    "path": "/이벤트월드"
   },
   {
     "order": 3,
